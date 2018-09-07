@@ -1,14 +1,32 @@
 @charset "utf-8";
-@font-face
 
+@font-face {
+    font-family: Champagne;
+    src: url('cac_champagne.woff') format('woff'),
+        url('cac_champagne.ttf') format('tff');
+}
+
+@font-face {
+    font-family: Grunge;
+    src: url('1942.woff') format('woff'),
+        url('1942.tff') format('tff');
+}
+
+@font-face {
+    font-family: Dobkin;
+    src: url('DobkinPlain.woff') format('woff'),
+        url('DobkinPlain.ttf') format('tff');
+}
+
+/* YES! I HAVE FINALLY FIXED IT! It turns out you were supposed to type all the font faces separately, not all the font families and the others in ONE singular font face. Lesson learned. */
 /*
    New Perspectives on HTML5 and CSS3, 7th Edition
    Tutorial 2
    Case Problem 1
    
    PHCT Typographic Style Sheet
-   Author: 
-   Date:   
+   Author: Aiden Martinez
+   Date:   09.06.2018
    
    Filename: ph_styles.css
 
@@ -18,6 +36,7 @@ html {
     background-color: hsl(91, 8%, 56%);
 }
 
+/* I also learned that you need to put a font face before an html element, or your code just does a 920 degree spin from a prone position and stabs you in the back... */
 body {
     background-color: hsl(58, 31%, 84%);
     font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
@@ -35,6 +54,7 @@ p {
     padding-left: 25px;
 }
 
+/* That's a lot of padding... are you getting beat up? */
 body>p {
     font-size: 1.1em;
     text-align: center;
@@ -52,11 +72,69 @@ nav>ul>li>a {
     font-family: 'Trebuchet MS', Helvetica, sans-serif;
     padding-top: 10px;
     padding-bottom: 10px;
+    text-decoration: unset;
 }
 
+nav>ul>li>a:link,
 nav>ul>li>a:visited {
-    text
+    color: white;
+    text-decoration: unset;
+    background-color: hsla(0, 0%, 42%, 0.4);
+}
+
+/* I learned that you have to use the text-decoration, not the text-decoration-style tag. Oof. Honest mistake. */
+nav>ul>li>a:active,
+nav>ul>li>a:hover {
+    color: hsla(0, 0%, 100%, 0.7);
+    background-color: hsla(0, 0%, 42%, 0.7);
 }
 
 /* Section Styles */
+section.playbill h1 {
+    font-size: 3em;
+    font-weight: normal;
+    margin: 0px;
+    padding-top: 20px;
+    padding-right: 0px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+}
+
+section#play1 {
+    background-color: hsl(240, 100%, 88%);
+}
+
+section#play1 h1 {
+    font-family: Champagne, cursive;
+}
+
+/* I had a hell of a time with the Champagne and the other fonts, but I finally figured out how to fix it, with the help of Alex N. */
+section#play2 {
+    background-color: hsl(25, 88%, 73%);
+}
+
+section#play2 h1 {
+    font-family: Grunge, 'Times New Roman', Times, serif;
+}
+
+section#play3 {
+    background-color: hsl(0, 100%, 75%);
+}
+
+section#play3 h1 {
+    font-family: Impact, Charcoal, sans-serif;
+}
+
+section#play4 {
+    background-color: hsl(296, 86%, 86%);
+}
+
+/* You should have gone with hot pink. Heh. Make more of a statement, y'know? */
+section#play4 h1 {
+    font-family: Dobkin, cursive;
+}
+
+/* I JUST DID ALL THIS! I AM A GOD! A GOD! Ahem, I got caught up in the moment. I mean, it's my first style sheet, I think. */
+/* Dobkin reminds me of that elf from Harry Potter. His name was uhh... Dobby. He got freed from servitude because of a SOCK. A SOCK! */
 /* Description List Styles */
+/* Wait... what is this for? I mean, we never used it...  */
